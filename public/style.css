@@ -1736,3 +1736,265 @@ body.auth-page {
     }
 
 }
+
+/* CART ICON IN MOBILE HEADER - CART PAGE ONLY */
+
+.cart-mobile-shortcut {
+    display: none !important;
+}
+
+@media (max-width: 850px) {
+
+    body.cart-page-body .nav-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        position: relative;
+        flex-wrap: nowrap !important;
+    }
+
+    body.cart-page-body .cart-mobile-shortcut {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        order: 2;
+        width: 43px;
+        height: 43px;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: 12px;
+        border-radius: 8px;
+        background: var(--yellow);
+        color: var(--navy);
+        text-decoration: none;
+    }
+
+    body.cart-page-body .menu-toggle {
+        display: block !important;
+        order: 3;
+        flex-shrink: 0;
+    }
+
+    body.cart-page-body .navbar {
+        order: 4;
+    }
+
+    body.cart-page-body .navbar .cart-btn {
+        display: none !important;
+    }
+
+    body.cart-page-body .cart-mobile-count {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        min-width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        border-radius: 50px;
+        background: #dc3545;
+        color: white;
+        font-size: 11px;
+        font-weight: 800;
+        border: 2px solid white;
+    }
+}
+
+/* ==========================================
+   CLEAN WAVE - MOBILE HEADER CART ICON
+   Cart icon remains outside the hamburger menu
+========================================== */
+
+.cart-mobile-shortcut {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    body.cart-page-body .header .nav-container {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        min-height: 68px;
+    }
+
+    body.cart-page-body .header .logo {
+        display: inline-block !important;
+        margin-right: auto !important;
+        flex-shrink: 1 !important;
+    }
+
+    /* Always-visible cart icon */
+    body.cart-page-body .header .cart-mobile-shortcut {
+        display: inline-flex !important;
+        position: absolute !important;
+        top: 50% !important;
+        right: 55px !important;
+        transform: translateY(-50%) !important;
+
+        width: 40px !important;
+        height: 40px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: var(--yellow) !important;
+        color: var(--navy) !important;
+
+        border-radius: 8px !important;
+        text-decoration: none !important;
+
+        z-index: 1005 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Hamburger remains on the right */
+    body.cart-page-body .header .menu-toggle {
+        display: block !important;
+        margin-left: auto !important;
+        position: relative !important;
+        z-index: 1006 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Keep navigation dropdown below the header */
+    body.cart-page-body .header .navbar {
+        position: absolute !important;
+        top: 68px !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+    }
+
+    /* Hide duplicate Cart text link inside mobile dropdown */
+    body.cart-page-body .navbar .cart-btn {
+        display: none !important;
+    }
+
+    /* Cart quantity badge */
+    body.cart-page-body .cart-mobile-shortcut .cart-mobile-count {
+        position: absolute !important;
+        top: -7px !important;
+        right: -7px !important;
+
+        min-width: 20px !important;
+        height: 20px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 5px !important;
+        border-radius: 50px !important;
+
+        background: #dc3545 !important;
+        color: #ffffff !important;
+
+        font-size: 11px !important;
+        font-weight: 800 !important;
+
+        border: 2px solid #ffffff !important;
+    }
+}
+
+
+/* ==========================================
+   CLEAN WAVE - MOBILE CART ICON
+   Applies to all three category pages
+   and cart page
+========================================== */
+
+/* Hidden on desktop */
+.cart-mobile-shortcut {
+    display: none;
+}
+
+/* Mobile and tablet header */
+@media screen and (max-width: 850px) {
+
+    .header .nav-container {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        min-height: 68px;
+    }
+
+    /* Website logo */
+    .header .logo {
+        flex-shrink: 1 !important;
+    }
+
+    /* Always-visible cart icon */
+    .header .cart-mobile-shortcut {
+        display: inline-flex !important;
+
+        position: absolute !important;
+        top: 50% !important;
+        right: 55px !important;
+
+        transform: translateY(-50%) !important;
+
+        width: 40px !important;
+        height: 40px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: var(--yellow) !important;
+        color: var(--navy) !important;
+
+        border-radius: 8px !important;
+        text-decoration: none !important;
+
+        z-index: 1005 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Hamburger button */
+    .header .menu-toggle {
+        display: block !important;
+        margin-left: auto !important;
+
+        position: relative !important;
+        z-index: 1006 !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    /* Cart quantity badge */
+    .header .cart-mobile-shortcut .cart-mobile-count {
+        position: absolute !important;
+
+        top: -7px !important;
+        right: -7px !important;
+
+        min-width: 20px !important;
+        height: 20px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 5px !important;
+
+        border-radius: 50px !important;
+
+        background: #dc3545 !important;
+        color: #ffffff !important;
+
+        font-size: 11px !important;
+        font-weight: 800 !important;
+
+        border: 2px solid #ffffff !important;
+    }
+
+}
